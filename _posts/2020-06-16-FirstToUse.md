@@ -2,7 +2,8 @@
 layout:post
 title:测试目录同步
 description:如题
-tag:测试
+category:测试类
+tags:测试
 ---
 
 
