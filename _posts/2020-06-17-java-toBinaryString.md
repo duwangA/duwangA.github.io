@@ -27,13 +27,13 @@ excerpt: 自己对于该方法的一些理解
 
 #	源码	<span id = "1">
 ##	toBinaryString	<span id = "1.1">
-
+```java
 	public static String toBinaryString(int i) {
         return toUnsignedString0(i, 1);
     }
-
+```
 ##	toUnsignedString0	<span id = "1.2">
-
+```java
 	private static String toUnsignedString0(int val, int shift) {
         // assert shift > 0 && shift <=5 : "Illegal shift value";
         int mag = Integer.SIZE - Integer.numberOfLeadingZeros(val);
@@ -45,9 +45,9 @@ excerpt: 自己对于该方法的一些理解
         // Use special constructor which takes over "buf".
         return new String(buf, true);
     }
-
+```
 ##	numberOfLeadingZeros	<span id = "1.3">
-
+```java
 	public static int numberOfLeadingZeros(int i) {
         // HD, Figure 5-6
         if (i == 0)
@@ -60,9 +60,9 @@ excerpt: 自己对于该方法的一些理解
         n -= i >>> 31;
         return n;
     }
-
+```
 ##	formatUnsignedInt	<span id = "1.4">
-
+```java
 	static int formatUnsignedInt(int val, int shift, char[] buf, int offset, int len) {
         int charPos = len;
         int radix = 1 << shift;
@@ -74,7 +74,7 @@ excerpt: 自己对于该方法的一些理解
 
         return charPos;
     }
-
+```
 ---
 
 #	toBinaryString
@@ -129,7 +129,7 @@ val为6，shift为1，radix为2，mask为1。
 ---
 
 #附digits表	<span id = "5">
-
+```java
 	final static char[] digits = {
         '0' , '1' , '2' , '3' , '4' , '5' ,
         '6' , '7' , '8' , '9' , 'a' , 'b' ,
@@ -138,3 +138,4 @@ val为6，shift为1，radix为2，mask为1。
         'o' , 'p' , 'q' , 'r' , 's' , 't' ,
         'u' , 'v' , 'w' , 'x' , 'y' , 'z'
     };
+```
