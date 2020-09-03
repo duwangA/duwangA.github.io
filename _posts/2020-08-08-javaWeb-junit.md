@@ -1,8 +1,9 @@
 ---
-title: Java Web 基础加强
-layout: post
-categories: Java Web
-tags: 单元测试, 反射, 注解
+title:	Java Web 基础加强
+layout:	post
+categories: java基础
+tags: java, 单元测试
+excerpt: junit单元测试
 ---
 
 
